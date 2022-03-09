@@ -1,0 +1,23 @@
+<table class="table table-sm">
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+    <tr *ngFor="let product of productService.productsList">
+        <td>{{product.Name}}</td>
+        <td>{{product.Quantity}}</td>
+        <td>{{product.Price}}</td>
+        <td> 
+            <i class="far fa-edit fa-lg text-info" (click)="editProduct(product)" style="cursor: pointer;"></i>
+        </td>
+        <td> 
+            <i class="far fa-trash-alt fa-lg text-danger" (click)="deleteProduct(product.ProductId)" style="cursor: pointer;"></i>
+        </td>
+    </tr>
+</tbody>
+</table>
+<!-- <pre>{{productsList | json}}</pre> -->

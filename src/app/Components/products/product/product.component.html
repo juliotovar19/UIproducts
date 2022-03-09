@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="SaveProduct()">
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fab fa-product-hunt fa-2x"></i>
+            </div>
+        </div>
+        <input type="text" class="form-control" formControlName="Name" placeholder="Product Name">
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="fas fa-clipboard-list fa-2x"></i>
+            </div>
+        </div>
+        <input type="number" class="form-control" formControlName="Quantity" placeholder="Quantity">
+    </div>
+</div>
+<div class="form-group">
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text bg-white">
+                <i class="far fa-money-bill-alt fa-2x"></i>
+            </div>
+        </div>
+        <input type="number" class="form-control" formControlName="Price" placeholder="Price" step=".01">
+    </div>
+</div>
+<div class="form-group">
+    <button class="btn btn-success btn-lg btn-block" type="submit" [disabled]="form.invalid">
+    <i class="fas fa-database"></i> Save   
+    </button>
+</div>
+
+</form>
